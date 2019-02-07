@@ -13,20 +13,22 @@ import { observer, Provider } from 'mobx-react';
 import store from './src/mobx/store';
 import SplashActivity from './src/scene/SplashActivity';
 import { MainStack, MainDrawer } from './src/route';
+import LoginScene from './src/scene/LoginScene';
 
 const Route = createStackNavigator({
-  Splaz: {
-    screen: SplashActivity,
-    navigationOptions: { header: null }
-  },
+  // Splaz: {
+  //   screen: SplashActivity,
+  //   navigationOptions: { header: null }
+  // },
   // Login: {
-
+  //   screen: LoginScene,
+  //   navigationOptions: { header: null }
   // },
   // Register: {
 
   // },
   Main: {
-    screen: MainDrawer,
+    screen: MainStack,
     navigationOptions: { header: null }
   }
 })

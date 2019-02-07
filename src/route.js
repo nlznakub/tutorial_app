@@ -6,6 +6,7 @@ import MainScene from './scene/MainScene';
 import FirstScene from './scene/FirstScene';
 import { normalize } from './functions';
 import { HeaderTitle, HeaderBack, HeaderRight } from './components/Header';
+import SecondScene from './scene/SecondScene';
 
 export const navigationOptions = {
     headerStyle: {
@@ -13,13 +14,6 @@ export const navigationOptions = {
     }
 }
 
-// const FirstStack = createStackNavigator({
-
-// })
-
-// const SecondStack = createStackNavigator({
-
-// })
 
 export const MainStack = createStackNavigator({
     Main: {
@@ -27,7 +21,6 @@ export const MainStack = createStackNavigator({
         navigationOptions: {
             ...navigationOptions,
             headerTitle: <HeaderTitle title={'หน้าหลัก'} />,
-            // headerTitle: '',
             headerLeft: <HeaderBack />,
             headerRight: <View />
         }
@@ -36,34 +29,25 @@ export const MainStack = createStackNavigator({
         screen: FirstScene,
         navigationOptions: {
             ...navigationOptions,
-            headerTitle: <HeaderTitle title={'หน้าแรก'} />,
-            // headerLeft: <HeaderBack />,
+            headerTitle: <HeaderTitle title={'หน้า1'} />,
             headerLeft: <HeaderRight disabled={false} />,
             headerRight: <HeaderRight disabled={true} />
         }
     },
-    // Second: {
-
-    // },
-    // Third: {
-
-    // },
-    // Four: {
-
-    // }
+    Second: {
+        screen: SecondScene,
+        navigationOptions: {
+            ...navigationOptions,
+            headerTitle: <HeaderTitle title={'หน้า2'} />,
+            headerLeft: <HeaderRight disabled={false} />,
+            headerRight: <HeaderRight disabled={true} />
+        }
+    }
 })
 
 export const MainDrawer = createDrawerNavigator({
     Main: {
         screen: MainStack
     },
-    // First: {
-    //     screen: FirstStack
-    // },
-    // Second: {
-    //     screen: SecondStack
-    // }
-    // Call: {
-    //     screen: CallStack
-    // }
 })
+

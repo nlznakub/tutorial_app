@@ -3,5 +3,7 @@
  */
 export default {
     main: '#ccc',
-    bg: '#eee'
+    bg: '#0a0f2c',
+    mango: '#a554ff',
+    pink: '#e451dc'
 }

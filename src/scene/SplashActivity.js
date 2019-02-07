@@ -22,17 +22,17 @@ class SplashActivity extends Component {
     }
 
     componentDidMount = () => {
-        setTimeout(() => {
-            this.props.navigation.navigate('Main')
-        }, 1000)
+        // setTimeout(() => {
+        //     this.props.navigation.navigate('Login')
+        // }, 1000)
     }
 
     render() {
         let { user } = this.props.store;
         let { refreshing } = this.state
         return (
-            <View>
-
+            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: normalize(30) }}>SplashActivity</Text>
             </View>
         );
     }
